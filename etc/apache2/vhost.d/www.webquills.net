@@ -1,0 +1,19 @@
+#=====================================================================
+# Redirect alias domains to the main domain
+#=====================================================================
+<VirtualHost *:80>
+ServerName webquills.net
+ServerAlias webquills.com webquills.org www.webquills.com www.webquills.org
+Redirect permanent / http://www.webquills.net/
+</VirtualHost>
+
+#=====================================================================
+# MAIN DOMAIN
+#=====================================================================
+<VirtualHost *:80>
+ServerName www.webquills.net
+DocumentRoot /usr/local/share/apache2/sites/www.webquills.net/current/htdocs
+
+AddHandler server-parsed .htm .html
+
+</VirtualHost>
