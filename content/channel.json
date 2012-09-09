@@ -1,0 +1,5 @@
+{
+    "title":"Webquills.net",
+    "index_template": "index.html",
+    "entry_template": "entry.html"
+}
