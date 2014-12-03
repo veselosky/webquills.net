@@ -1,0 +1,26 @@
+<%args>
+$tags => qr/./
+$entry_count => 5
+</%args>
+<%once>
+use XML::Feed;
+</%once>
+<%init>
+my $feed = XML::Feed->parse('/home/vince/public_html/webquills.net/cachemir/delicious.rss');
+unless ($feed) {
+    $r->log->error("Cannot open delicious feed at /home/vince/public_html/webquills.net/cachemir/delicious.rss; ".XML::Feed->errstr);
+    return;
+}
+my $count = 0;
+</%init>
+% for my $entry ($feed->entries) { next unless grep(m/$tags/, $entry->tags) && $entry->content->body;
+<div class="hentry">
+<h3 class="entry-title"><a href="<% $entry->link %>" rel="bookmark"><% $entry->title %></a></h3>
+<div class="entry-summary"><p><% $entry->content->body |n %></p>
+</div><p class="entry-footer align-right">
+<a class="readmore" href="<% $entry->link %>">Read it</a>
+<span class="date published"><span class="value-title" title="<% $entry->issued->datetime %>"> </span><% $entry->issued->ymd('-') %></span>
+</p>
+</div>
+% last if ++$count > $entry_count;
+%} # vim:ft=mason

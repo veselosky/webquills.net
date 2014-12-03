@@ -1,0 +1,21 @@
+{% extends "base.html" -%}
+{% block title %}{{ channel.title|striptags }}{% endblock title%}
+{% block body -%}
+<h1 class='channel-title'>{{ channel.title }}</h1>
+{%- if channel.subtitle %}
+<h2 class='channel-title'>{{ channel.subtitle }}</h2>
+{% endif -%}
+
+{%- if channel.bodycontent() -%} 
+    {{ channel.bodycontent() |safe }} 
+{%- endif -%}
+
+<div class="entry-list">
+    {% for entry in channel.entries %}
+    <div class="entry-tease">
+        <h3 class="entry-title tease"><a href="{{ entry.url('html') }}">{{ entry.title }}</a></h3>
+        <div class="entry-summary">{{ entry.summary }}</div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock body %}

@@ -6,7 +6,7 @@ import logging
 logging.basicConfig(level=logging.INFO)
 
 env['otto.build_dir'] = 'build/staged'
-#env['otto.template_dir'] = './templates'
+env['otto.template_dir'] = './templates'
 env['otto.site'] = 'www.webquills.net'
 
 @task
@@ -24,6 +24,8 @@ def build():
         local('cp -a etc %s/' % target)
         # local('cp -a content %s/htdocs' % target)
         blog.build_blog('content', 'htdocs')
+        local('cp -a htdocs %s/' % target)
+        local('cat htdocs/css/*.css | cssmin > %s/htdocs/css/styles.css' % target)
 
 @task
 def clean():

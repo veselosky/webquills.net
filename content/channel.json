@@ -1,5 +1,7 @@
 {
-    "title":"Webquills.net",
-    "index_template": "index.html",
-    "entry_template": "entry.html"
+    "title": "Webquills.net",
+    "subtitle": "Crafting Effective Web Sites",
+    "content": [
+        {"type":"text/html", "value": "It's a pain in the ass to compose content in JSON."}
+    ]
 }
