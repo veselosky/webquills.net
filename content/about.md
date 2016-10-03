@@ -1,14 +1,10 @@
-Format: complete  
 Title: About Webquills.net  
 Basename: about  
-atom_id: tag:webquills.net,2009-06-07:/about  
+GUID: tag:webquills.net,2009-06-07:/about  
 Created: 2009-06-07T07:51  
-Modified: 2009-06-07T07:51  
-Published: 1970-06-07T07:51  
-Keywords:   
-Tags:   
-Category:   
-Summary: Webquills.net helps web developers, designers, and marketers improve the effectiveness of their web sites.  
+Updated: 2009-06-07T07:51  
+Published: 1970-06-07T07:51
+Description: Webquills.net helps web developers, designers, and marketers improve the effectiveness of their web sites.  
 
 # About Webquills
 

@@ -1,15 +1,11 @@
-Format: complete  
 ID: 28  
 Title: Perl Tool Tip: module_info  
 Basename: perl-answering-questions-about  
-atom_id: tag:www.webquills.net,2008:/scroll//1.18  
+GUID: tag:www.webquills.net,2008:/scroll//1.18  
 Created: 2007-12-30 09:03:23  
-Modified: 2008-02-18 21:53:59  
-Published: 2008-02-18 21:45:00  
-Keywords:   
-Tags:   
+Updated: 2008-02-18 21:53:59  
+Published: 2008-02-18 21:45:00     
 Category: Perl  
-Summary:   
 
 # Perl Tool Tip: module_info
 

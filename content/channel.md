@@ -1,6 +1,7 @@
 Title: Webquills.net
 Subtitle: Crafting Effective Web Sites
 Author: Vince Veselosky
+GUID: c003795d-d856-4b59-8fdb-ece5fbec8fc6
 
 Webquills.net is a collection of essays on the craft of creating effective web
 sites, authored by me, Vince Veselosky, a web application architect. I talk

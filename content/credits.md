@@ -1,14 +1,10 @@
-Format: complete  
 Title: About Webquills.net - site credits  
 Basename: about  
-atom_id: tag:webquills.net,2009-06-07:/credits  
+GUID: tag:webquills.net,2009-06-07:/credits  
 Created: 2009-06-07T09:25  
-Modified: 2009-06-07T09:25  
-Published: 1970-06-07T09:25  
-Keywords:   
-Tags:   
-Category:   
-Summary: How Webquills.net was built.  
+Updated: 2009-06-07T09:25  
+Published: 1970-06-07T09:25
+Description: How Webquills.net was built.  
 
 # About Webquills.net
 
