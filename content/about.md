@@ -8,6 +8,13 @@ Description: Webquills.net helps web developers, designers, and marketers improv
 
 # About Webquills
 
+Webquills.net is a collection of essays on the craft of creating effective web
+sites, authored by me, Vince Veselosky, a web application architect. I talk
+about topics like scalability, performance, usability, architecture, front-end
+vs. back-end engineering, and anything else that comes to mind. This site is
+mostly about technology, but the technology only exists to serve some higher
+purpose, and I will occasionally delve into the *why* as well as the *what*.
+
 ## The Problem
 A few years ago businesses and non-profit organizations questioned whether they needed a web presence at all. Those days are over. Now every organization assumes they need a web site as a matter of course, just like business cards. 
 

@@ -8,3 +8,9 @@
 * [x] Convert "Modified:" header to "Updated"
 * [x] Convert "atom_id" header to "GUID"
 * [x] Generate GUID for any that are missing
+
+## Site/system setup tasks
+
+* [x] Decide on build strategy and project organization
+* [x] Strategy for selecting themes and templates?
+* [x] Generate an example Makefile
