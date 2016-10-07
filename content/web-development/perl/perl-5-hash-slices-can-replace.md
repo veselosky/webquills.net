@@ -1,4 +1,5 @@
 ID: 33  
+Itemtype: Item/Page/Article
 Title: Perl 5: Hash slices can replace loops  
 Basename: perl-5-hash-slices-can-replace  
 GUID: tag:www.webquills.net,2008:/scroll//1.23  

@@ -1,4 +1,5 @@
 ID: 38  
+Itemtype: Item/Page/Article
 Title: Mason's caching improves performance, relieves database pressure   
 Basename: masons-caching-improves-performance-relieves-database-pressure  
 GUID: tag:www.webquills.net,2008:/scroll//4.38  

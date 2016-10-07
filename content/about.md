@@ -1,4 +1,5 @@
 Title: About Webquills.net  
+Itemtype: Item/Page
 Basename: about  
 GUID: tag:webquills.net,2009-06-07:/about  
 Created: 2009-06-07T07:51  

@@ -1,4 +1,5 @@
 ID: 16  
+Itemtype: Item/Page/Article
 Title: Beyond Perl?  
 Basename: beyond-perl  
 GUID: tag:www.webquills.org,2007:/scroll//1.6  

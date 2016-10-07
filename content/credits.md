@@ -1,4 +1,5 @@
 Title: About Webquills.net - site credits  
+Itemtype: Item/Page
 Basename: about  
 GUID: tag:webquills.net,2009-06-07:/credits  
 Created: 2009-06-07T09:25  

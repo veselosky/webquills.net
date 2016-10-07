@@ -1,4 +1,5 @@
 ID: 23  
+Itemtype: Item/Page/Article
 Title: CSS Drop Shadows: 3 Techniques  
 Basename: css-drop-shadows-3-techniques  
 GUID: tag:www.webquills.org,2007:/scroll//1.13  

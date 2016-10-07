@@ -1,4 +1,5 @@
 ID: 29  
+Itemtype: Item/Page/Article
 Title: Choose the right template system for your team  
 Basename: choose-the-right-template-syst  
 GUID: tag:www.webquills.net,2008:/scroll//1.19  

@@ -1,4 +1,5 @@
 ID: 37  
+Itemtype: Item/Page/Article
 Title: Perl: Readability, Expressiveness, and Concision  
 Basename: perl-readability-expressivenes  
 GUID: tag:www.webquills.net,2008:/scroll//4.37  

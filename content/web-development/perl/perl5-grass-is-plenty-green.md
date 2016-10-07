@@ -1,4 +1,5 @@
 ID: 12  
+Itemtype: Item/Page/Article
 Title: Perl 5: The grass is plenty green  
 Basename: perl5-grass-is-plenty-green
 GUID: tag:www.webquills.net,2007:/scroll//1.1  

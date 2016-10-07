@@ -1,4 +1,5 @@
 ID: 34  
+Itemtype: Item/Page/Article
 Title: ORM - PITA?  
 Basename: orm-pita  
 GUID: tag:www.webquills.net,2008:/scroll//1.24  

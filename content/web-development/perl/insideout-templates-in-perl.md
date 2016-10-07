@@ -1,4 +1,5 @@
 ID: 31  
+Itemtype: Item/Page/Article
 Title: Inside-out Templates in Perl  
 Basename: insideout-templates-in-perl  
 GUID: tag:www.webquills.net,2008:/scroll//1.21  

@@ -1,4 +1,5 @@
 ID: 28  
+Itemtype: Item/Page/Article
 Title: Perl Tool Tip: module_info  
 Basename: perl-answering-questions-about  
 GUID: tag:www.webquills.net,2008:/scroll//1.18  

@@ -1,4 +1,5 @@
-ID: 45  
+ID: 45
+Itemtype: Item/Page/Article
 Title: 10 Things I Love/Hate About Movable Type  
 Basename: 10-things-i-lovehate-about-mov  
 GUID: tag:www.webquills.net,2009:/scroll//4.45  
