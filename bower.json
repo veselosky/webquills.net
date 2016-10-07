@@ -1,0 +1,22 @@
+{
+  "name": "webquills.net",
+  "homepage": "https://github.com/veselosky/webquills.net",
+  "authors": [
+    "Vince Veselosky <vince@control-escape.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "Apache 2",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize-css": "normalize.css#^5.0.0",
+    "typeplate-starter-kit": "^3.0.1"
+  }
+}
