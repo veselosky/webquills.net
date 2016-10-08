@@ -1,0 +1,25 @@
+{
+  "name": "webquills.net",
+  "version": "1.0.0",
+  "description": "webquills.net",
+  "main": "index.js",
+  "dependencies": {
+    "clean-css": "^3.4.20",
+    "normalize.css": "^5.0.0",
+    "typeplate-starter-kit": "^3.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/veselosky/webquills.net.git"
+  },
+  "author": "Vince Veselosky <vince@control-escape.com>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/veselosky/webquills.net/issues"
+  },
+  "homepage": "https://github.com/veselosky/webquills.net#readme"
+}
