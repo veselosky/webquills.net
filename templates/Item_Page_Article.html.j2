@@ -1,6 +1,7 @@
 {% extends "Item_Page.html.j2" %}
 {% block wholebody %}
-{% set author = Item.attribution|selectattr("role", "author") or site.attribution|selectattr("role", "author") %}
+{% set author = Item.attribution|jmes("[?role==`author`]|[0]") or
+site.attribution|jmes("[?role=`author`]|[0]") %}
 <div class="block-group header">
     <header class="block">
     <nav>
