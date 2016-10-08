@@ -11,11 +11,6 @@
 #######################################################################
 
 SHELL := /bin/bash
-
-# Inventory the source files, make list of dest files to target
-# ERROR: Assumes there are no JSON files without Markdown sources.
-JSONPOSTS = $(shell find content -name "*.md" | sed s/content/build\\/html/ | sed s/.md/.json/)
-POSTS = $(JSONPOSTS:.json=.html)
 BUILDDIR = "build/html"
 CONTENTDIR = "content"
 
@@ -57,13 +52,6 @@ json:
 html: json
 	quill render `find $(BUILDDIR) -name '*.json'`
 
-# HTML pages are produced by feeding a context to a template. The context is
-# constructed from the post JSON file, the index, and a site-wide variables
-# file.
-build/html/%.html: build/html/%.json templates/blog.html site.yml
-	./bin/j2.py -r build/html -t templates blog.html site.yml $(@:.html=.json) > $@
-
-posts: json templates/blog.html site.yml $(POSTS)
 
 build/html/archive.html: templates/archive.html build/html/_index.json
 	./bin/j2.py -r build/html -t templates archive.html site.yml build/html/_index.json > $@
@@ -75,10 +63,6 @@ build/html/feeds/recent.atom: json
 	@mkdir -p $(@D)  # `dirname $@`
 	./bin/mkfeed.py -r build/html build/html/_index.json > $@
 
-pages: build/html/archive.html build/html/categories.html
-
-feed: build/html/feeds/recent.atom
-
 site: posts pages feed
 	mkdir -p build/html/assets
 	cp -r static/* build/html/assets/
@@ -86,38 +70,10 @@ site: posts pages feed
 # TODO combine and minify CSS, JS
 # TODO List of index pages. How to manage these?
 
-
-clean: clean-build clean-pyc clean-test
-
-clean-build:
+clean:
 	rm -fr build/
-	rm -fr dist/
-	rm -fr .eggs/
-	find . -name '*.egg-info' -exec rm -fr {} +
-	find . -name '*.egg' -exec rm -f {} +
-
-clean-pyc:
-	find . -name '*.pyc' -exec rm -f {} +
-	find . -name '*.pyo' -exec rm -f {} +
-	find . -name '*~' -exec rm -f {} +
-	find . -name '__pycache__' -exec rm -fr {} +
-
-clean-test:
-	rm -fr .tox/
-	rm -f .coverage
-	rm -fr htmlcov/
-
-test:
-	python setup.py test
-
-test-all:
-	tox
 
 deploy:
 	test -e ~/.aws/*.pem && ssh-add ~/.aws/*.pem
 	ansible-playbook -i ~/Google\ Drive/Websites/ansible_inventory_for_statics.ini deploy.yml
-
-clean:
-	rm -fr build/*
-
 
