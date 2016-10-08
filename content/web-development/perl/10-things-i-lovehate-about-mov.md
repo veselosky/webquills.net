@@ -1,13 +1,12 @@
 ID: 45
 Itemtype: Item/Page/Article
 Title: 10 Things I Love/Hate About Movable Type  
-Basename: 10-things-i-lovehate-about-mov  
+Slug: 10-things-i-lovehate-about-mov  
 GUID: tag:www.webquills.net,2009:/scroll//4.45  
 disqus_url: http://www.webquills.net/scroll/2009/05/10-things-i-lovehate-about-mov.html
 Created: 2009-05-03 18:31:07  
 Updated: 2009-05-03 18:33:14  
 Published: 2009-05-03 18:30:45
-Category: Perl  
 Description: In which our hero counts off the list of inspirations and irritations encountered while blogging with Movable Type.  
 
 # 10 Things I Love/Hate About Movable Type

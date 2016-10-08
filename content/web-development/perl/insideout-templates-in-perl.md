@@ -1,13 +1,13 @@
 ID: 31  
 Itemtype: Item/Page/Article
 Title: Inside-out Templates in Perl  
-Basename: insideout-templates-in-perl  
+Slug: insideout-templates-in-perl  
 GUID: tag:www.webquills.net,2008:/scroll//1.21  
 Created: 2008-02-09 08:00:53  
 Updated: 2009-05-15 07:41:05  
 Published: 2008-02-09 07:57:44     
 Tags: Templates  
-Category: Perl  
+
 
 # Inside-out Templates in Perl
 Pop quiz, hotshot. Your team has undertaken a project to completely redesign your web site. Fancy-pants designers are hard at work generating not one but *three* new designs. The designs will be put through a battery of usability tests, after which the best parts will be combined into the final design. They need *you* to create server-side logic that will populate content areas, navigation, and various design elements according to how the user manipulates the site. But the HTML is nowhere near finished, and the designers will be tweaking it right up to the day of the test. *What do you do?*

@@ -1,13 +1,12 @@
 ID: 12  
 Itemtype: Item/Page/Article
 Title: Perl 5: The grass is plenty green  
-Basename: perl5-grass-is-plenty-green
+Slug: perl5-grass-is-plenty-green
 GUID: tag:www.webquills.net,2007:/scroll//1.1  
 Created: 2007-12-15 16:43:19
 Updated: 2007-12-22 10:36:32
 Published: 2007-12-22 10:33:19   
-Tags: framework perl webdev  
-Category: Web Design  
+Tags: framework perl webdev webdesign
 
 
 # Perl 5: The grass is plenty green
