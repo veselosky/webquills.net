@@ -52,6 +52,20 @@ json:
 html: json
 	quill render `find $(BUILDDIR) -name '*.json'`
 
+STYLES=\
+	node_modules/normalize.css/normalize.css \
+	node_modules/typeplate-starter-kit/dist/css/typeplate.css \
+	themes/posh/style/style.css
+
+$(BUILDDIR)/_T/style.css: $(STYLES)
+	mkdir -p $(BUILDDIR)/_T/
+	cat $(STYLES) | node_modules/clean-css/bin/cleancss --source-map -o $@
+
+stylesheet: $(BUILDDIR)/_T/style.css
+site: html stylesheet
+
+serve:
+	cd build/html && python -mhttp.server
 
 build/html/archive.html: templates/archive.html build/html/_index.json
 	./bin/j2.py -r build/html -t templates archive.html site.yml build/html/_index.json > $@
@@ -63,11 +77,6 @@ build/html/feeds/recent.atom: json
 	@mkdir -p $(@D)  # `dirname $@`
 	./bin/mkfeed.py -r build/html build/html/_index.json > $@
 
-site: posts pages feed
-	mkdir -p build/html/assets
-	cp -r static/* build/html/assets/
-	cp -r extra/* build/html/
-# TODO combine and minify CSS, JS
 # TODO List of index pages. How to manage these?
 
 clean:
