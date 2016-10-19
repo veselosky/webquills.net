@@ -1,3 +1,4 @@
+---
 ID: 29  
 Itemtype: Item/Page/Article
 Title: Choose the right template system for your team  
@@ -7,8 +8,8 @@ disqus_url: http://www.webquills.net/scroll/2008/01/choose-the-right-template-sy
 Created: 2008-01-29 22:58:18  
 Updated: 2009-05-15 07:42:07  
 Published: 2008-01-29 22:53:18     
-Tags: Templates  
-
+Tags: [Templates,]  
+...
 
 # Choose the right template system for your team
 What is the best template system? Ask five people and you'll probably get six different answers. Perl has more than its fair share of template tools, from the Swiss Army Chainsaw of [Template Toolkit][], through [HTML::Mason][] and [Text::Template][] down to the ever-tempting "variables interpolated in a here-doc" method.

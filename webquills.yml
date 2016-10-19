@@ -1,0 +1,21 @@
+options:
+  root: build/html
+  source: content
+
+jinja2:
+  templatedir: themes/posh/templates
+
+item_defaults:
+  copyright: Copyright 2016 Vince Veselosky
+  license: https://creativecommons.org/licenses/by-nc-nd/4.0/
+  attributions:
+  - name: Vince Veselosky
+    role: author
+
+site:
+  title: "Webquills: Content management systems for digital media"
+  description: Need a great description!
+  base: http://www.webquills.net
+  attributions:
+  - name: Vince Veselosky
+    role: author

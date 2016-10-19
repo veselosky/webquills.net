@@ -1,13 +1,14 @@
+---
 ID: 12  
 Itemtype: Item/Page/Article
-Title: Perl 5: The grass is plenty green  
+Title: "Perl 5: The grass is plenty green"
 Slug: perl5-grass-is-plenty-green
 GUID: tag:www.webquills.net,2007:/scroll//1.1  
 Created: 2007-12-15 16:43:19
 Updated: 2007-12-22 10:36:32
 Published: 2007-12-22 10:33:19   
-Tags: framework perl webdev webdesign
-
+Tags: [framework, perl, webdev, webdesign]
+...
 
 # Perl 5: The grass is plenty green
 A few months ago I wrote a missive lamenting the coolness going on in other languages in terms of web frameworks and the dearth of magical leaps forward in Perl. Well, I take it all back. Serves me right for not recognizing hype for what it is.

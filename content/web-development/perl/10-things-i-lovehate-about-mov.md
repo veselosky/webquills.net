@@ -1,3 +1,4 @@
+---
 ID: 45
 Itemtype: Item/Page/Article
 Title: 10 Things I Love/Hate About Movable Type  
@@ -8,6 +9,7 @@ Created: 2009-05-03 18:31:07
 Updated: 2009-05-03 18:33:14  
 Published: 2009-05-03 18:30:45
 Description: In which our hero counts off the list of inspirations and irritations encountered while blogging with Movable Type.  
+...
 
 # 10 Things I Love/Hate About Movable Type
 I have a love/hate relationship with my blogging tool. Here are ten aspects of Movable Type about which I am emotionally conflicted.

@@ -1,3 +1,4 @@
+---
 ID: 34  
 Itemtype: Item/Page/Article
 Title: ORM - PITA?  
@@ -7,8 +8,8 @@ disqus_url: http://www.webquills.net/scroll/2008/06/orm-pita.html
 Created: 2008-06-14 19:31:17  
 Updated: 2008-06-14 19:32:05  
 Published: 2008-06-14 19:25:35     
-Tags: ORM perl  
-
+Tags: [ORM, perl]  
+...
 
 # ORM - PITA?
 Recently I read a note called [DBIx::Class Gotchas][gotchas] over at [Perl Alchemy][]. I've been struggling myself for several months with a bundle of old [Class::DBI][] code, and I can relate. Both packages fall into the category of Object-Relational Mapping (ORM), software that tries to map programming objects around entities stored in a relational database.

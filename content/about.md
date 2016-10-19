@@ -1,3 +1,4 @@
+---
 Title: About Webquills.net  
 Itemtype: Item/Page
 Basename: about  
@@ -6,6 +7,7 @@ Created: 2009-06-07T07:51
 Updated: 2009-06-07T07:51  
 Published: 1970-06-07T07:51
 Description: Webquills.net helps web developers, designers, and marketers improve the effectiveness of their web sites.  
+...
 
 # About Webquills
 

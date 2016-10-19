@@ -1,13 +1,14 @@
+---
 ID: 33  
 Itemtype: Item/Page/Article
-Title: Perl 5: Hash slices can replace loops  
+Title: "Perl 5: Hash slices can replace loops" 
 Slug: perl-5-hash-slices-can-replace  
 GUID: tag:www.webquills.net,2008:/scroll//1.23  
 Created: 2008-05-26 12:07:37  
 Updated: 2008-05-26 12:07:37  
 Published: 2008-05-26 12:00:57     
-Tags: hash perl slice  
-
+Tags: [hash, perl, slice]  
+...
 
 # Perl 5: Hash slices can replace loops
 

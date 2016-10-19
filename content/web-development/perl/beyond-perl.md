@@ -1,3 +1,4 @@
+---
 ID: 16  
 Itemtype: Item/Page/Article
 Title: Beyond Perl?  
@@ -6,7 +7,7 @@ GUID: tag:www.webquills.org,2007:/scroll//1.6
 Created: 2007-12-15 16:43:20  
 Updated: 2007-12-15 16:43:20  
 Published: 2007-05-30 21:15:51
-
+...
 
 # Beyond Perl?
 <em>[This was originally posted on <a href="http://whatvincedid.blogspot.com">Vince's personal blog</a>, but is relevant enough that it deserves reposting here, I think. -Editor]</em>

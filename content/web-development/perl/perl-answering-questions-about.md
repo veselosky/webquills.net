@@ -1,12 +1,13 @@
+---
 ID: 28  
 Itemtype: Item/Page/Article
-Title: Perl Tool Tip: module_info  
+Title: "Perl Tool Tip: module_info"
 Slug: perl-answering-questions-about  
 GUID: tag:www.webquills.net,2008:/scroll//1.18  
 Created: 2007-12-30 09:03:23  
 Updated: 2008-02-18 21:53:59  
 Published: 2008-02-18 21:45:00     
-
+...
 
 # Perl Tool Tip: module_info
 

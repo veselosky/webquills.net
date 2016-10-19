@@ -1,3 +1,4 @@
+---
 Title: About Webquills.net - site credits  
 Itemtype: Item/Page
 Basename: about  
@@ -6,6 +7,7 @@ Created: 2009-06-07T09:25
 Updated: 2009-06-07T09:25  
 Published: 1970-06-07T09:25
 Description: How Webquills.net was built.  
+...
 
 # About Webquills.net
 

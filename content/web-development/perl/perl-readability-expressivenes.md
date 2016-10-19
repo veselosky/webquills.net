@@ -1,13 +1,14 @@
+---
 ID: 37  
 Itemtype: Item/Page/Article
-Title: Perl: Readability, Expressiveness, and Concision  
+Title: "Perl: Readability, Expressiveness, and Concision"
 Slug: perl-readability-expressivenes  
 GUID: tag:www.webquills.net,2008:/scroll//4.37  
 disqus_url: http://www.webquills.net/scroll/2008/07/perl-readability-expressivenes.html
 Created: 2008-07-07 07:09:43  
 Updated: 2008-07-07 07:48:34  
 Published: 2008-07-07 07:05:06     
-
+...
 
 # Perl: Readability, Expressiveness, and Concision
 <blockquote class="thesis">Writing readable code means expressing yourself as clearly and correctly as you can, not targeting the lowest common denominator of reader.</blockquote>
