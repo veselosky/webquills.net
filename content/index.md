@@ -1,11 +1,12 @@
 ---
 itemtype: Item/Page/Catalog
-guid: URN:UUID:135ba59e-608c-4ebd-8907-acf8b8dd1b16
+guid: urn:UUID:135ba59e-608c-4ebd-8907-acf8b8dd1b16
 created: 2016-10-08T20:06:14-04:00
 updated: 2016-10-08T20:06:14-04:00
 published: 2016-10-08T20:06:14-04:00
 wq_output: [html, atom]
-query: "* | sort_by(@, &updated)"
+queries: 
+- "* | [?starts_with(itemtype, `Item/Page/Article`)]| reverse(sort_by(@, &updated))"
 title: Webquills.net
 ...
 
@@ -21,7 +22,8 @@ action**. Effective web sites **empower and inspire** people to take
  action.
 
 ## How do you build web sites *effectively*?
-Our <a href="/web-development/">Web Development</a> section is about **doing things right**. **Highly effective, low-cost, high-performance web sites**
+Our <a href="/web-development/">Web Development</a> section is about **doing 
+things right**. **Highly effective, low-cost, high-performance web sites**
 are the result of **good architecture** and the proper application
 of **web standards**, not tricks and hacks. When you understand the 
 core principles of effective web development, you can 

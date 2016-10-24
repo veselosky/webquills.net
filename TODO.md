@@ -2,7 +2,7 @@
 
 ## Template Tasks
 
-* [ ] Get the feed template working with the new data model
+* [x] Get the feed template working with the new data model
 * [ ] Move copyright from template to data model
 * [ ] Move POSH to its own repository, figure out distribution
 
