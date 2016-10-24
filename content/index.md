@@ -1,6 +1,6 @@
 ---
 itemtype: Item/Page/Catalog
-guid: 135ba59e-608c-4ebd-8907-acf8b8dd1b16
+guid: URN:UUID:135ba59e-608c-4ebd-8907-acf8b8dd1b16
 created: 2016-10-08T20:06:14-04:00
 updated: 2016-10-08T20:06:14-04:00
 published: 2016-10-08T20:06:14-04:00

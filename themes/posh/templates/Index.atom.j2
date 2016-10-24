@@ -1,30 +1,45 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    {%- from 'macros.j2' import linktag -%}
+    {%- import 'macros.j2' as macros -%}
     {%- set entries = Index.Items|jmes(Catalog.query[0]) -%}
     {%- set most_recent_entry = entries|jmes('reverse(sort_by(@, &updated))[0]')
     -%}
+    {%- set site_author = Site.attributions|jmes('[?role==`author`]|[0]') -%}
     <title>{{ Item.title }}</title>
     <id>{{ Item.guid }}</id>
     <updated>{{ most_recent_entry.updated }}</updated>
     {% for link in Item.links -%}
-        {{ linktag(link) }}
+        {{ macros.linktag(link, base=Site.base) }}
     {%- endfor %}
-    <link rel="self" href="{{  }}" />
+    <link rel="self"
+          href="{{ Site.base ~ Item.archetype.href|with_suffix('.atom') }}" />
+    {% if "html" in Item.wq_output -%}
+    <link rel="alternate"
+          href="{{ Site.base ~ Item.archetype.href|with_suffix('.html') }}" />
+    {%- endif %}
     <author>
-        <name>Vince Veselosky</name>
+        <name>{{ site_author.name }}</name>
+        {% if site_author.url %}<uri>{{ site_author.url }}</uri>{% endif %}
+        {% if site_author.email %}<email>{{ site_author.email }}</email>{%
+        endif %}
     </author>
+    <rights>{{ Site.copyright }}</rights>
 
     {%- for entry in entries -%}
+    {%- set author = entry.attributions|jmes('[?role==`author`]|[0]') -%}
 <entry>
     <title>{{ entry.title }}</title>
     <summary type="text">{{ entry.description|striptags }}</summary>
     <category term="{{ entry.category.label }}"/>
     <published>{{ entry.published }}</published>
     <updated>{{ entry.updated }}</updated>
-    <link rel="alternate" type="text/html" href="{{ channel._url }}{{
-        entry._path }}.html" />
+    <link rel="alternate" type="text/html"
+          href="{{ Site.base ~ entry.archetype.href|with_suffix('.html') }}" />
+    {% for link in entry.links -%}
+    {{ macros.linktag(link, base=Site.base) }}
+    {%- endfor %}
     <id>{{ entry.guid }}</id>
+    <rights>{{ entry.copyright }}</rights>
 </entry>
 {% endfor -%}
 
