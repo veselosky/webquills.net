@@ -6,7 +6,6 @@ jinja2:
   templatedir: themes/posh/templates
 
 item_defaults:
-  copyright: Copyright 2016 Vince Veselosky
   license: https://creativecommons.org/licenses/by-nc-nd/4.0/
   attributions:
   - name: Vince Veselosky

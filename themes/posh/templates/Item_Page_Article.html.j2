@@ -1,7 +1,7 @@
 {% extends "Item_Page.html.j2" %}
 {% block wholebody %}
-{% set author = Item.attribution|jmes("[?role==`author`]|[0]") or
-site.attribution|jmes("[?role=`author`]|[0]") %}
+{% set author = Item.attributions|jmes("[?role==`author`]|[0]") or
+site.attributions|jmes("[?role=`author`]|[0]") %}
 <div class="block-group header">
     <header class="block">
     <nav>
@@ -13,23 +13,24 @@ site.attribution|jmes("[?role=`author`]|[0]") %}
     <main class="block">
         <article class="h-entry">
             <div class="e-content">
-                {{ Article.body | safe }}
+                {{ (Article.body or Page.text) | safe }}
             </div>
             <footer class="article-meta">
-                <p class="p-meta">
+                <div class="p-meta">
                     By <span class="p-author">{{ author.name }}</span> on
                     <time class="dt-updated">{{ Item.updated[:10] }}</time>
-                </p>
-                <p>{{ Item.copyright }} | <a rel="license"
-                                                                href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img
+                </div>
+                <div class="p-meta"><a rel="license"
+                       href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img
                         alt="Creative Commons License" style="border-width:0"
                         src="http://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png"/></a>
+                    {{ Item.copyright }}
                     <br>
                     This work is licensed under <a rel="license"
                                                    href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative
                         Commons Attribution-NonCommercial-NoDerivatives 4.0
                         International License</a>
-                </p>
+                </div>
             </footer>
         </article>
     </main>

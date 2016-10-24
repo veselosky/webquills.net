@@ -1,0 +1,12 @@
+{# Extracting this to a macro because the syntax is a little verbose and
+tedious.
+
+Note the trailings slash marking the link tag as "self-closing". This
+makes the output valid XML as well as valid HTML5:
+https://www.w3.org/TR/html5/syntax.html#start-tags
+#}
+{% macro linktag(link, base='') -%}
+<link {% for attribute, value in link.items() %} {{ attribute }}=
+    {%- if attribute=="href" %}"{{ base ~ value }}"{% else %}"{{ value }}"
+    {%- endif %} />
+{%- endmacro %}

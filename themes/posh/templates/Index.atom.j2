@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <title>Webquills.net — Helping web developers perfect their craft</title>
-    <id>tag:www.webquills.net,2008-06-29:/scroll//4</id>
-    {% set e = channel.entries[0] -%}
-    <updated>{{ e.updated or e.date or e._modified }}</updated>
-    <link rel="alternate" type="text/html" href="{{ channel._url }}index.html" />
-    <link rel="self" href="{{ channel._url }}index.atom" type="application/atom+xml" />
-    <link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-nd/3.0/" />
-    <logo>http://creativecommons.org/images/public/somerights20.gif</logo>
+    {%- from 'macros.j2' import linktag -%}
+    {%- set entries = Index.Items|jmes(Catalog.query[0]) -%}
+    {%- set most_recent_entry = entries|jmes('reverse(sort_by(@, &updated))[0]')
+    -%}
+    <title>{{ Item.title }}</title>
+    <id>{{ Item.guid }}</id>
+    <updated>{{ most_recent_entry.updated }}</updated>
+    {% for link in Item.links -%}
+        {{ linktag(link) }}
+    {%- endfor %}
+    <link rel="self" href="{{  }}" />
     <author>
         <name>Vince Veselosky</name>
     </author>
 
-    {%- for entry in channel.entries -%}
+    {%- for entry in entries -%}
 <entry>
-    <title>{{ entry.title}}</title>
-    <summary type="text">{{ entry.summary|striptags }}</summary>
-    {% for topic in entry.topic_list -%}
-    <category term="{{ topic }}"/>
-    {% endfor -%}
-    <published>{{ entry.published or entry.date }}</published>
-    <updated>{{ entry.updated or entry.published or entry.date }}</updated>
-    <content type='html'>{{ entry.content }}</content>{# auto escaped #}
+    <title>{{ entry.title }}</title>
+    <summary type="text">{{ entry.description|striptags }}</summary>
+    <category term="{{ entry.category.label }}"/>
+    <published>{{ entry.published }}</published>
+    <updated>{{ entry.updated }}</updated>
     <link rel="alternate" type="text/html" href="{{ channel._url }}{{
         entry._path }}.html" />
-    <id>{{ channel._url }}{{ entry._path }}</id>
+    <id>{{ entry.guid }}</id>
 </entry>
 {% endfor -%}
 
