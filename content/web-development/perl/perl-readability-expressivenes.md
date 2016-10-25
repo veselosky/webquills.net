@@ -11,7 +11,9 @@ Published: 2008-07-07 07:05:06
 ...
 
 # Perl: Readability, Expressiveness, and Concision
-<blockquote class="thesis">Writing readable code means expressing yourself as clearly and correctly as you can, not targeting the lowest common denominator of reader.</blockquote>
+<blockquote class="thesis"><p>Writing readable code means expressing yourself 
+as clearly and correctly as you can, not targeting the lowest common 
+denominator of reader.</p></blockquote>
 
 There are *many* people out there who are [preaching the gospel of readable code][1]. I myself am one of them. I am a strong proponent of expressive variable and subroutine names, for example. Unless you are a fire-and-forget contract programmer, you are going to be reading your code a lot more often than you write it. But honestly, if code readability is your primary concern, use Python, not Perl.
 

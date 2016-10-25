@@ -19,6 +19,7 @@ A *hash slice* is a syntax for accessing the values of multiple keys of a hash i
 ## Basic hash slice syntax
 You perform a hash slice by using a list as a hash index, rather than a scalar value, and preceding with the `@` sigil rather than the `$` sigil you would use to get a scalar value.
     
+    :::perl
     my %number_for = (one => 1, two => 2, three => 3);
     # Regular access to scalar key
     print $number_for{one}; # 1
@@ -32,6 +33,7 @@ A cautionary note: notice how the scalar index uses a bare word as the key. Perl
 ## Merging two hashes
 Since hash slices can be lvalues, they can be used to merge one hash into another. A common example is when you get configuration information from more than one source, but you want to consolidate it to look up in just one place.
 
+    :::perl
     my %your_numbers = (two => 2, four => 4, six => 6);
     # I get all your numbers! 
     # (And your number will override mine if they differ)
@@ -42,6 +44,7 @@ Since hash slices can be lvalues, they can be used to merge one hash into anothe
 ## Accessing keys in a particular order
 Here is a common thing you run into in web development. You have received input from a web form and validated it. (You *have* validated it, right?) The data lives in a hash, and you want to store it in a database. You have your SQL statement all prepared, but it requires that the values be bound in exact column order. Unfortunately, the `values` function cannot be relied upon to return the values in the order you want. (And besides, you don't want to store the value of the submit button!)
 
+    :::perl
     # get valid data from your validation code
     my %validated = %number_for;
     # Columns of your table, in order needed by your SQL
@@ -53,12 +56,14 @@ Here is a common thing you run into in web development. You have received input 
 ## Accessing values sorted by keys
 Say you want to sort a hash by its keys, and then use the values in that sorted order. Using the above data, perhaps we want to print numbers in alphabetical order.
 
+    :::perl
     print @number_for{sort keys %number_for}; # 41632
 
 
 ## Slicing a hash reference
 Eventually you will find yourself with a reference to a hash, and you will discover that the above syntax does not work. You may try three or four different combinations of curlies and arrows that just generate errors. Don't give up! You *can* slice a hashref! First, let's review using a hashref to get at scalar values.
 
+    :::perl
     my $num_for = \%number_for;
     # Common syntax for dereferencing and getting a scalar index
     print $num_for->{one}; # 1
@@ -69,6 +74,7 @@ Eventually you will find yourself with a reference to a hash, and you will disco
 
 The key to slicing a reference to a hash is to use the alternate syntax shown above, replacing the initial `$` sigil with `@`.
     
+    :::perl
     # The lazy way:
     print @$num_for{@columns}; # 613
     # The explicit way:
@@ -78,8 +84,6 @@ Note the distinct absence of the "arrow" syntax. The arrow implies a scalar, and
 
 ## Powerful syntax
 The hash slice is an advanced syntax demonstrating Perl's concision and expressiveness. Now you should be able to recognize it when you see it, and hopefully apply it to your own projects to save time and space. (But remember, use your Perl superpowers only for Good, never for Evil!)
-
-For a semi-regular diet of great Perl programming tips, [subscribe to the Webquills.net feed](http://feeds.feedburner.com/Webquills) or [get Webquills.net via email](http://www.feedburner.com/fb/a/emailverifySubmit?feedId=929839&loc=en_US). 
 
 
 

@@ -16,6 +16,7 @@ BUILDDIR = $(dir $(SITEDIR))
 STYLES=\
 	node_modules/normalize.css/normalize.css \
 	node_modules/typeplate-starter-kit/dist/css/typeplate.css \
+	themes/posh/style/pygments.css \
 	themes/posh/style/style.css
 
 #######################################################################

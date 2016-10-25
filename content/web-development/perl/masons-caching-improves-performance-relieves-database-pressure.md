@@ -17,6 +17,7 @@ Tags: [Mason, Templates]
 ## Mason reads from database
 As part of a web site registration application, the user is to be presented with a list of email newsletters the site makes available. During registration, the user may select one or more of the newsletters and be automatically subscribed. So I coded up a Mason component to display this list.
 
+    :::HTML
     <%once>
     use ListDB;
     </%once>
@@ -40,6 +41,7 @@ The solution, of course, is to cache the response from the database, so that the
 
 If only Mason had a built-in cache system so I wouldn't have to go digging around for extra modules on CPAN and write another 20 lines of code. Oh wait, *it does*!
 
+    :::HTML
     <%init>
     return if $m->cache_self(expire_in => 3600); # THE SOLUTION! (ALMOST)
     require ListDB;
@@ -59,6 +61,7 @@ Ah, but there's a flaw in your brilliant plan, I hear you say. What happens if t
 
 Doggone it, why do you have to be so observant? I guess I'll have to break another tool out of Mason's bag of tricks. Watch *this*!
 
+    :::HTML
     <%init>
     return if $m->cache_self(expire_in => 3600, busy_lock => 60); # THE SOLUTION!
     require ListDB;

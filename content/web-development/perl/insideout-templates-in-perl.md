@@ -45,6 +45,7 @@ Hang on a minute. At the server, I have access to everything the client has and 
 
 Off to [CPAN Search][CPAN], and in minutes I was writing my first experimental script with [HTML::TreeBuilder][]. I started with something like this:
 
+	:::perl
 	#!/usr/bin/perl
 	use HTML::TreeBuilder;
 
@@ -68,6 +69,7 @@ I quickly implemented some procedural code that would perform the replacements I
 ### TreeBulder Tip 1: Comments are stripped by default
 The designers needed to see their "trace" comments in the output of the processed template. HTML::TreeBuilder throws comments away by default. To keep them:
 	
+	:::perl
 	my $tree = HTML::TreeBuilder->new();
 	$tree->store_comments(1); # Before parsing!
 
@@ -76,11 +78,13 @@ This makes comments appear as separate nodes in the tree, with a tag of `~commen
 ### TreeBuilder Tip 2: Enable parsing XML-style empty element tags
 My designers were using tools that produced (for the most part) valid XHTML. In XHTML, the empty tag syntax is used for tags like `link` and `img`.
 
+    :::XML
     <link rel="stylesheet" href="/global.css" />
     			<!-- XHTML Empty tag syntax  ^^^ -->
 
 TreeBuilder's default parse mode (inherited from HTML::Parser) treats these trailing slashes as character data. This didn't cause any actual problems for me, but better safe than sorry. I explicitly enabled support for empty tags this way:
 
+	:::perl
 	$tree->empty_element_tags(1); # Before parsing!
 
 ### TreeBuilder Tip 3: Be explicit with `as_HTML()`
@@ -94,6 +98,7 @@ The third and most important argument defines elements whose end-tags are "optio
 
 So the *correct* way to call `as_HTML()` is like this:
 
+    :::perl
     $w_tree->as_HTML('<>&','    ',{});
 
 ### TreeBuilder Tip 4: Don't use `as_XML()` unless you *really* mean it
@@ -104,13 +109,15 @@ One of the sneaky things that will bite you is that in XHTML, script tags have a
 ### TreeBuilder Tip 5: HTML::Element::Library
 I discovered this too late to use it myself, but [HTML::Element::Library][] extends HTML::Element with some finger-saving shortcuts. Several times I ended up writing a code stanza that looked like this:
 
+	:::perl
 	my $e = $tree->look_down(id => 'replaceMe');
 	$e->delete_content();
 	$e->push_content($replacement);
 
 With HTML::Element::Library, you can do this instead:
 
-     $tree->look_down(id => 'replaceMe')->replace_content($replacement);
+    :::perl
+    $tree->look_down(id => 'replaceMe')->replace_content($replacement);
 
 ## TreeBuilder Pros and Cons
 
