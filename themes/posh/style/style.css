@@ -18,6 +18,36 @@ html {
 h1, h2, h3, h4, h5, h6 {
     font-family: "Liberation Sans", "Helvetica", "Arial", "Lucida Grande", "Verdana", "Gill Sans", sans-serif;
 }
+/* Redefining absurdly large headers from typeplate */
+
+.typl8-mega {
+  font-size: 4em;
+  margin-bottom: 2.42424rem;
+}
+.typl8-alpha, h1 {
+  font-size: 3.33333em;
+  margin-bottom: 2.0202rem;
+}
+.typl8-beta, h2 {
+  font-size: 2.66667em;
+  margin-bottom: 1.61616rem;
+}
+.typl8-gamma, h3 {
+  font-size: 2em;
+  margin-bottom: 1.21212rem;
+}
+.typl8-delta, h4 {
+  font-size: 1.33333em;
+  margin-bottom: 0.80808rem;
+}
+.typl8-epsilon, h5 {
+  font-size: 1.16667em;
+  margin-bottom: 0.70707rem;
+}
+.typl8-zeta, h6 {
+  font-size: 1em;
+  margin-bottom: 0.60606rem;
+}
 blockquote {
     font-size: 1.1rem;
     font-style: italic;
