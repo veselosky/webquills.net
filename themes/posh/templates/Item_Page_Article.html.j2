@@ -35,7 +35,8 @@ site.attributions|jmes("[?role=`author`]|[0]") %}
      */
 
     var disqus_config = function () {
-        this.page.url = '{{ site.base ~ Item.archetype.href|with_suffix('.html') }}';
+        correct_url = '{{ site.base ~ Item.archetype.href|with_suffix('.html') }}';
+        this.page.url = '{{ Item.disqus_url or site.base ~ Item.archetype.href|with_suffix('.html') }}';
         this.page.identifier = '{{ Item.disqus_url or Item.archetype.href|with_suffix('.html') }}';
         this.page.title = '{{ Item.title }}';
     };

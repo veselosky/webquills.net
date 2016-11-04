@@ -10,6 +10,11 @@ div.main {
 div.codehilite {
     overflow: scroll;
 }
+.item-list .item {
+    border-bottom: 2px dotted;
+    border-raduis: 5px;
+    margin-bottom: 1.21212rem;
+}
 /* TYPOGRAPHY */
 html {
   font-family: "Palatino", "Georgia", "Times New Roman", "Hoefler Text", "Baskerville", serif;

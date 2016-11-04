@@ -1,8 +1,16 @@
 {% extends "Item_Page.html.j2" %}
+{% block docmeta %}
+{{ super() }}
+{% if "atom" in Item.wq_output -%}
+<link rel="alternate" type="application/atom+xml" href="{{ Item.archetype.href|with_suffix('.atom') }}"
+      title="{{ Item.title }}" />
+{%- endif %}
+{% endblock %}
+
 {% block wholebody %}
-{% import 'macros.j2' as macros %}
-{% set author = Item.attributions|jmes("[?role==`author`]|[0]") or
-site.attributions|jmes("[?role=`author`]|[0]") %}
+{%- import 'macros.j2' as macros -%}
+{%- set author = Item.attributions|jmes("[?role==`author`]|[0]") or
+site.attributions|jmes("[?role=`author`]|[0]") -%}
 <div class="block-group header">
     <header class="block">
     <nav>
@@ -11,35 +19,33 @@ site.attributions|jmes("[?role=`author`]|[0]") %}
 </div>
 
 <div class="block-group main">
-    <main class="block">
-        <article class="h-entry">
-            <h1 class="p-name">{{ Item.title }}</h1>
-            <div class="e-content">
-                {{ (Page.text) | safe }}
-            </div>
+  <main class="block">
+    <article class="h-entry">
+      <h1 class="p-name">{{ Item.title }}</h1>
+      <div class="e-content">
+          {{ (Page.text) | safe }}
+      </div>
 
-            <section class="item-list">
-                {% set entries = Index.Items|jmes(Catalog.queries[0]) %}
-                {% for entry in entries %}
-                <article class="item">
-                    <h3><a href="{{ entry.archetype.href|with_suffix('.html') }}">{{ entry.title }}</a></h3>
-                    {% if entry.description %}<p>{{ entry.description }}</p>{% endif %}
-                </article>
-                {% endfor %}
-            </section>
-
-            <footer class="article-meta">
-                {{ macros.copyright_notice(Item) }}
-            </footer>
+      <section class="item-list">
+        {%- set entries = Index.Items|jmes(Catalog.queries[0]) -%}
+        {% for entry in entries -%}
+        <article class="item">
+          <h3><a href="{{ entry.archetype.href|with_suffix('.html') }}">{{ entry.title }}</a></h3>
+          <p class="p-meta">By <span class="p-author">{{ author.name }}</span> on
+              <time class="dt-updated">{{ entry.updated[:10] }}</time>
+          </p>
+          {% if entry.description %}<p>{{ entry.description }}</p>{% endif %}
         </article>
-    </main>
+        {%- endfor %}
+      </section>
 
-    <aside class="block sidebar">
-    </aside>
+      <footer class="article-meta">
+          {{ macros.copyright_notice(Item) }}
+      </footer>
+    </article>
+  </main>
+
+  <aside class="block sidebar">
+  </aside>
 </div>
-
-<div class="block-group page-footer">
-
-</div>
-
 {% endblock wholebody %}
