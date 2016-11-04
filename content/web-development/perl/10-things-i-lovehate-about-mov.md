@@ -5,8 +5,6 @@ Title: 10 Things I Love/Hate About Movable Type
 Slug: 10-things-i-lovehate-about-mov  
 GUID: tag:www.webquills.net,2009:/scroll//4.45  
 disqus_url: http://www.webquills.net/scroll/2009/05/10-things-i-lovehate-about-mov.html
-Created: 2009-05-03 18:31:07  
-Updated: 2009-05-03 18:33:14  
 Published: 2009-05-03 18:30:45
 Description: In which our hero counts off the list of inspirations and irritations encountered while blogging with Movable Type.  
 ...

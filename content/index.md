@@ -7,26 +7,31 @@ published: 2016-10-08T20:06:14-04:00
 wq_output: [html, atom]
 queries: 
 - "* | [?starts_with(itemtype, `Item/Page/Article`)]| reverse(sort_by(@, &updated))"
+- "*" # Fake query to fix my vim highlight
 title: Webquills.net
 ...
 
-## What makes a web site *effective*?
-Our <a href="/web-strategy/">Web Strategy</a> section is about making sure your web site is
- **doing the right things**. Web sites don't exist for their own sake, 
- but as part of a **communication 
-strategy** to **deliver a message** and more importantly to
-**engage your audience** in a conversation. In some circles this is called
-"marketing", but it is much broader and more important than just selling a product
-or raising awareness. It's about **spreading knowledge** and **inspiring
-action**. Effective web sites **empower and inspire** people to take
- action.
+## Insights into content management and scalable web publishing for technical implementers
 
-## How do you build web sites *effectively*?
-Our <a href="/web-development/">Web Development</a> section is about **doing 
-things right**. **Highly effective, low-cost, high-performance web sites**
-are the result of **good architecture** and the proper application
-of **web standards**, not tricks and hacks. When you understand the 
-core principles of effective web development, you can 
-create **valuable, effective web sites** with great speed and reasonable 
-cost.
+The web is the center of a multi-billion dollar economy of advertising and
+commerce. Content marketing and social media have turned everyone into digital
+publishers. Companies, organizations, and individuals struggle to build reliable
+and scalable digital publishing operations, and spend huge amounts of money to
+do so.
+{: .typl8-drop-cap }
+
+Webquills.net is a technical blog dedicated to exploring inexpensive, efficient,
+and scalable techniques for delivering great content-oriented web experiences.
+We talk about web site design and development, web content management systems,
+and web performance.
+
+### About the Author
+Vince Veselosky is a software developer and solution architect
+who has been designing, building, and deploying web content management systems
+for so long, he’s probably produced more content management systems than
+content. He’s also an aspiring author. Learn more at [vince.veselosky.me][].
+
+[vince.veselosky.me]: http://vince.veselosky.me
+
+## Articles
 

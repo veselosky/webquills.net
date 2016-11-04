@@ -5,8 +5,6 @@ Title: Choose the right template system for your team
 Slug: choose-the-right-template-syst  
 GUID: tag:www.webquills.net,2008:/scroll//1.19  
 disqus_url: http://www.webquills.net/scroll/2008/01/choose-the-right-template-syst.html
-Created: 2008-01-29 22:58:18  
-Updated: 2009-05-15 07:42:07  
 Published: 2008-01-29 22:53:18     
 Tags: [Templates,]  
 ...

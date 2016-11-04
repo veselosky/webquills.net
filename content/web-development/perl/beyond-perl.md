@@ -4,7 +4,6 @@ Itemtype: Item/Page/Article
 Title: Beyond Perl?  
 Slug: beyond-perl  
 GUID: tag:www.webquills.org,2007:/scroll//1.6  
-Created: 2007-12-15 16:43:20  
 Updated: 2007-12-15 16:43:20  
 Published: 2007-05-30 21:15:51
 ...

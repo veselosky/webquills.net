@@ -5,8 +5,6 @@ Title: "CSS Drop Shadows: 3 Techniques"
 Slug: css-drop-shadows-3-techniques  
 GUID: tag:www.webquills.org,2007:/scroll//1.13  
 disqus_url: http://www.webquills.net/scroll/2007/06/css-drop-shadows-3-techniques.html
-Created: 2007-12-15 16:43:20  
-Updated: 2009-05-15 07:28:07  
 Published: 2007-06-16 08:49:58
 Tags: [CSS,]  
 ...

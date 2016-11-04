@@ -4,8 +4,6 @@ Itemtype: Item/Page/Article
 Title: Inside-out Templates in Perl  
 Slug: insideout-templates-in-perl  
 GUID: tag:www.webquills.net,2008:/scroll//1.21  
-Created: 2008-02-09 08:00:53  
-Updated: 2009-05-15 07:41:05  
 Published: 2008-02-09 07:57:44     
 Tags: [Templates,]
 ...

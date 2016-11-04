@@ -5,8 +5,6 @@ Title: ORM - PITA?
 Slug: orm-pita  
 GUID: tag:www.webquills.net,2008:/scroll//1.24  
 disqus_url: http://www.webquills.net/scroll/2008/06/orm-pita.html
-Created: 2008-06-14 19:31:17  
-Updated: 2008-06-14 19:32:05  
 Published: 2008-06-14 19:25:35     
 Tags: [ORM, perl]  
 ...
