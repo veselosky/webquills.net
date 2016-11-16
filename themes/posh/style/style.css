@@ -29,25 +29,30 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 4em;
   margin-bottom: 2.42424rem;
 }
-.typl8-alpha, h1 {
+.typl8-alpha {
   font-size: 3.33333em;
   margin-bottom: 2.0202rem;
 }
-.typl8-beta, h2 {
+.typl8-beta, h1 {
   font-size: 2.66667em;
   margin-bottom: 1.61616rem;
 }
-.typl8-gamma, h3 {
+.typl8-gamma, h2 {
   font-size: 2em;
   margin-bottom: 1.21212rem;
 }
-.typl8-delta, h4 {
+.typl8-delta, h3 {
   font-size: 1.33333em;
   margin-bottom: 0.80808rem;
 }
-.typl8-epsilon, h5 {
+.typl8-epsilon, h4 {
   font-size: 1.16667em;
   margin-bottom: 0.70707rem;
+}
+.typl8-zeta, h5 {
+  font-size: 1em;
+  font-weight: bold;
+  margin-bottom: 0.60606rem;
 }
 .typl8-zeta, h6 {
   font-size: 1em;
