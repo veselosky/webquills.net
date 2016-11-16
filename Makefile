@@ -11,13 +11,14 @@
 #######################################################################
 
 SHELL := /bin/bash
-SITEDIR = $(shell quill config 'options.root')
+SITEDIR = $(shell quill config 'environments.local.root')
 BUILDDIR = $(dir $(SITEDIR))
 STYLES=\
 	node_modules/normalize.css/normalize.css \
 	node_modules/typeplate-starter-kit/dist/css/typeplate.css \
 	themes/posh/style/pygments.css \
 	themes/posh/style/style.css
+PROD = $(shell quill config 'environments.production.root')
 
 #######################################################################
 # Build targets and rules
@@ -48,6 +49,9 @@ clean:
 	rm -fr $(BUILDDIR)
 
 deploy:
+	aws s3 sync --acl public-read $(SITEDIR) $(PROD)
+
+deployOldWay:
 	test -e ~/.aws/*.pem && ssh-add ~/.aws/*.pem
 	ansible-playbook -i ~/Google\ Drive/Websites/ansible_inventory_for_statics.ini deploy.yml
 

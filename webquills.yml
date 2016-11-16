@@ -2,6 +2,14 @@ options:
   root: build/html
   source: content
 
+environments:
+  local:
+    root: build/html
+    source: content
+  production:
+    root: "s3://www.webquills.net"
+
+
 jinja2:
   templatedir: themes/posh/templates
 
