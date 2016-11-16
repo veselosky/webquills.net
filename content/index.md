@@ -11,25 +11,26 @@ queries:
 title: Webquills.net
 ...
 
-## Insights into content management and scalable web publishing for technical implementers
+## Content management and scalable web publishing for technical implementers
 
-The web is the center of a multi-billion dollar economy of advertising and
-commerce. Content marketing and social media have turned everyone into digital
-publishers. Companies, organizations, and individuals struggle to build reliable
-and scalable digital publishing operations, and spend huge amounts of money to
-do so.
+Webquills.net is a technical blog exploring content management systems and
+digital publishing from the perspective of technology implementers: front-end
+and back-end web developers, site reliability engineers, and web site operators
+of all kinds.
 {: .typl8-drop-cap }
 
-Webquills.net is a technical blog dedicated to exploring inexpensive, efficient,
-and scalable techniques for delivering great content-oriented web experiences.
-We talk about web site design and development, web content management systems,
-and web performance.
+Our goal is to uncover inexpensive, efficient, and scalable techniques for
+delivering great content-oriented web experiences.  We talk about web site
+design and development, web content management systems, web performance,
+distribution: in short, all the things you need to care about if you are
+building a digital publishing system for the web.
 
 ### About the Author
-Vince Veselosky is a software developer and solution architect
-who has been designing, building, and deploying web content management systems
-for so long, he’s probably produced more content management systems than
-content. He’s also an aspiring author. Learn more at [vince.veselosky.me][].
+
+Vince Veselosky is a software developer and solution architect who has been
+designing, building, and deploying web content management systems for so long,
+he’s probably produced more content management systems than content. He’s also
+an aspiring author. Learn more at [vince.veselosky.me][].
 
 [vince.veselosky.me]: http://vince.veselosky.me
 
