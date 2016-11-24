@@ -27,9 +27,11 @@ PROD = $(shell quill config 'environments.production.root')
 
 help:
 	@echo "clean - remove all build, test, coverage and Python artifacts"
-	@echo "site - build the entire web site"
-	@echo "test - run tests quickly with the default Python"
-	@echo "test-all - run tests on every Python version with tox"
+	@echo "html - build all HTML files and feeds"
+	@echo "stylesheet - build styles and scripts for the site"
+	@echo "site - build entire web site, including HTML, styles, and scripts"
+	@echo "serve - run a web server in the build directory"
+	@echo "deploy - upload the files to the public server"
 
 
 html:
