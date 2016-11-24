@@ -1,6 +1,6 @@
 ---
 itemtype: Item/Page/Article
-guid: 22c0eb15-908b-401c-8830-54f5efdb9492
+guid: urn:UUID:22c0eb15-908b-401c-8830-54f5efdb9492
 created: 2016-11-16T08:32:36.808336-05:00
 updated: 2016-11-16T08:32:36.808336-05:00
 published: 2016-11-16T08:32:36.808336-05:00
