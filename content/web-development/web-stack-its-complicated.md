@@ -4,6 +4,8 @@ guid: urn:UUID:22c0eb15-908b-401c-8830-54f5efdb9492
 created: 2016-11-16T08:32:36.808336-05:00
 updated: 2016-11-16T08:32:36.808336-05:00
 published: 2016-11-16T08:32:36.808336-05:00
+thumbnail:
+    href: /web-development/web-stack-its-complicated.svg
 description: "Diagram: How you think of your technology stack vs how it actually looks."
 title: "The modern web technology stack: It's complicated"
 ...
