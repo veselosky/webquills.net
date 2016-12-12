@@ -37,6 +37,9 @@ help:
 html:
 	quill build
 
+dev:
+	quill build --dev
+
 $(SITEDIR)/_T/style.css: $(STYLES)
 	mkdir -p $(SITEDIR)/_T/
 	cat $(STYLES) | node_modules/clean-css/bin/cleancss --source-map -o $@
