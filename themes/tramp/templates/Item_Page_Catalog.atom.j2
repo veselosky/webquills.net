@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    {%- import 'macros.j2' as macros -%}
+    {%- set entries = Index.Items|jmes(Catalog.queries[0]) -%}
+    {%- set most_recent_entry = entries|jmes('reverse(sort_by(@, &updated))[0]')
+    -%}
+    {%- set site_author = site.attributions|jmes('[?role==`author`]|[0]') -%}
+    <title>{{ Item.title }}</title>
+    <id>{{ Item.guid }}</id>
+    <updated>{{ most_recent_entry.updated }}</updated>
+    {% for link in Item.links -%}
+        {{ macros.linktag(link, base=site.base) }}
+    {%- endfor %}
+    <link rel="self" href="{{ site.base ~ Item.archetype.href|with_suffix('.atom') }}" />
+    {% if "html" in Item.wq_output -%}
+    <link rel="alternate" href="{{ site.base ~ Item.archetype.href|with_suffix('.html') }}" />
+    {%- endif %}
+    <author>
+        <name>{{ site_author.name }}</name>
+        {% if site_author.url %}<uri>{{ site_author.url }}</uri>{% endif %}
+        {% if site_author.email %}<email>{{ site_author.email }}</email>{%
+        endif %}
+    </author>
+    <rights>{{ site.copyright }}</rights>
+
+    {%- for entry in entries -%}
+    {%- set author = entry.attributions|jmes('[?role==`author`]|[0]') %}
+<entry>
+    <title>{{ entry.title }}</title>
+    {% if entry.description -%}
+    <summary type="text">{{ entry.description|striptags }}</summary>
+    {%- endif %}
+    <category term="{{ entry.category.label }}"/>
+    <published>{{ entry.published }}</published>
+    <updated>{{ entry.updated }}</updated>
+    <link rel="alternate" type="text/html"
+          href="{{ site.base ~ entry.archetype.href|with_suffix('.html') }}" />
+    {% for link in entry.links -%}
+    {{ macros.linktag(link, base=site.base) }}
+    {%- endfor %}
+    <id>{{ entry.guid }}</id>
+    <rights>{{ entry.copyright }}</rights>
+</entry>
+{% endfor -%}
+
+</feed>

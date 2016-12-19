@@ -1,0 +1,26 @@
+{# Extracting this to a macro because the syntax is a little verbose and
+tedious.
+
+Note the trailings slash marking the link tag as "self-closing". This
+makes the output valid XML as well as valid HTML5:
+https://www.w3.org/TR/html5/syntax.html#start-tags
+#}
+{% macro linktag(link, base='') -%}
+{%- if link.href.startswith('/') -%}
+{%- set URL = base ~ link.href -%}
+{%- else -%}
+{%- set URL = link.href -%}
+{%- endif %}
+<link {% for attribute, value in link.items() %} {{ attribute }}=
+    {%- if attribute=="href" %}"{{ URL }}"{% else %}"{{ value }}"
+    {%- endif %}{% endfor %} />
+{%- endmacro %}
+
+{# TODO Copyright macro should honor license argument #}
+{% macro copyright_notice(Item) -%}
+<div class="p-meta">{{ Item.copyright }} |
+This work is licensed under <a rel="license"
+href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative
+Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>
+</div>
+{%- endmacro %}

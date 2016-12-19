@@ -34,17 +34,21 @@ help:
 	@echo "deploy - upload the files to the public server"
 
 
-html:
+$(SITEDIR)/_T/style.css: $(STYLES)
+	mkdir -p $(SITEDIR)/_T/
+	cat $(STYLES) | node_modules/clean-css/bin/cleancss --source-map -o $@
+stylesheet: $(SITEDIR)/_T/style.css
+
+themes/tramp/templates/style.css:
+	cat $(STYLES) | sed 's/@charset "UTF-8";//' | node_modules/clean-css/bin/cleancss --source-map -o $@
+styletemplate: themes/tramp/templates/style.css
+
+html: styletemplate
 	quill build
 
 dev:
 	quill build --dev
 
-$(SITEDIR)/_T/style.css: $(STYLES)
-	mkdir -p $(SITEDIR)/_T/
-	cat $(STYLES) | node_modules/clean-css/bin/cleancss --source-map -o $@
-
-stylesheet: $(SITEDIR)/_T/style.css
 site: html stylesheet
 
 serve:
@@ -52,6 +56,7 @@ serve:
 
 clean:
 	rm -fr $(BUILDDIR)
+	rm themes/tramp/templates/style.css
 
 deploy:
 	aws s3 sync --acl public-read $(SITEDIR) $(PROD)

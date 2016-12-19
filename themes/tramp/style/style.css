@@ -1,0 +1,159 @@
+/* LAYOUT CSS */
+.block-group {
+    margin: auto;
+    padding: 0 2em;
+}
+div.main {
+    margin: auto;
+    max-width: 50em;
+}
+div.codehilite {
+    overflow: scroll;
+}
+.item-list .item {
+    border-bottom: 2px dotted;
+    border-raduis: 5px;
+    margin-bottom: 1.21212rem;
+}
+/* TYPOGRAPHY */
+html {
+  font-family: "Palatino", "Georgia", "Times New Roman", "Hoefler Text", "Baskerville", serif;
+
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Liberation Sans", "Helvetica", "Arial", "Lucida Grande", "Verdana", "Gill Sans", sans-serif;
+}
+/* Redefining absurdly large headers from typeplate */
+
+.typl8-mega {
+  font-size: 4em;
+  margin-bottom: 2.42424rem;
+}
+.typl8-alpha {
+  font-size: 3.33333em;
+  margin-bottom: 2.0202rem;
+}
+.typl8-beta, h1 {
+  font-size: 2.66667em;
+  margin-bottom: 1.61616rem;
+}
+.typl8-gamma, h2 {
+  font-size: 2em;
+  margin-bottom: 1.21212rem;
+}
+.typl8-delta, h3 {
+  font-size: 1.33333em;
+  margin-bottom: 0.80808rem;
+}
+.typl8-epsilon, h4 {
+  font-size: 1.16667em;
+  margin-bottom: 0.70707rem;
+}
+.typl8-zeta, h5 {
+  font-size: 1em;
+  font-weight: bold;
+  margin-bottom: 0.60606rem;
+}
+.typl8-zeta, h6 {
+  font-size: 1em;
+  margin-bottom: 0.60606rem;
+}
+blockquote {
+    font-size: 1.1rem;
+    font-style: italic;
+    font-weight: bold;
+    margin: 2em 4em;
+}
+.header {
+    text-align: center;
+    top: auto;
+    margin: 3em auto;
+}
+.sidebar {
+    font-size: 17px;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+footer.article-meta {
+    font-size: .8rem;
+    color: #888;
+}
+
+/* ANCHOR STYLES */
+a {
+    text-decoration: none;
+    color: rgb(61, 146, 201);
+}
+a:hover,
+a:focus {
+    text-decoration: underline;
+}
+
+a.headerlink {
+    display: none;
+}
+h1:hover a.headerlink,
+h2:hover a.headerlink,
+h3:hover a.headerlink,
+h4:hover a.headerlink,
+h5:hover a.headerlink,
+h6:hover a.headerlink
+{ display: inline-block; }
+
+.brand-title,
+.brand-tagline,
+.brand-logo {
+    text-align: center;
+    font-weight: bold;
+    margin:0;
+}
+.brand-title {
+    text-transform: uppercase;
+}
+.brand-tagline {
+  /*  color: rgb(176, 202, 219); */
+}
+.brand-logo {
+    margin: 24px 0 0 0;
+}
+
+/*.nav-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.nav-item {
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+}*/
+.nav-item a {
+    background: transparent;
+    border: 2px solid rgb(176, 202, 219);
+    color: #fff;
+    margin-top: 1em;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    font-size: 85%;
+}
+.nav-item a:hover,
+.nav-item a:focus {
+    border: 2px solid rgb(61, 146, 201);
+    text-decoration: none;
+}
+
+.content-subhead {
+    text-transform: uppercase;
+    color: #aaa;
+    border-bottom: 1px solid #eee;
+    padding: 0.4em 0;
+    font-size: 80%;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+}
+
+.h-entry {
+    padding-bottom: 2em;
+}
