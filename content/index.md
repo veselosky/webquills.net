@@ -1,14 +1,17 @@
 ---
-itemtype: Item/Page/Catalog
-guid: urn:UUID:135ba59e-608c-4ebd-8907-acf8b8dd1b16
-created: 2016-10-08T20:06:14-04:00
-updated: 2016-10-08T20:06:14-04:00
-published: 2016-10-08T20:06:14-04:00
-wq_output: [html, atom]
-queries: 
-- "* | [?starts_with(itemtype, `Item/Page/Article`)]| reverse(sort_by(@, &updated))"
-- "*" # Fake query to fix my vim highlight
-title: Webquills.net
+Webquills:
+    scribes: [html, atom]
+Catalog:
+    queries:
+        - "* | [?starts_with(itemtype, `Item/Page/Article`)]| reverse(sort_by(@, &updated))"
+        - "*"
+Item:
+    itemtype: Item/Page/Catalog
+    guid: urn:UUID:135ba59e-608c-4ebd-8907-acf8b8dd1b16
+    created: 2016-10-08T20:06:14-04:00
+    updated: 2016-10-08T20:06:14-04:00
+    published: 2016-10-08T20:06:14-04:00
+    title: Webquills.net
 ...
 
 ## Content management and scalable web publishing for technical implementers
